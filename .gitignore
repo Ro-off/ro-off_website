@@ -29,3 +29,4 @@ yarn.lock
 package-lock.json
 bun.lockb
 /package-lock.json.disabled
+/.github/workflows/deploy.yml.disabled
