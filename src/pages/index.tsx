@@ -13,7 +13,7 @@ export default function IndexPage() {
             websites regardless of your design experience.
           </span>
           <div className={subtitle({ class: "mt-4" })}>
-            Beautiful, fast and modern React UI library.
+            Beautiful, fast and modern React UI library 1.
           </div>
         </div>
       </section>
