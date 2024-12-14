@@ -15,6 +15,9 @@ export default function IndexPage() {
           <div className={subtitle({ class: "mt-4" })}>
             Beautiful, fast and modern React UI library 1.
           </div>
+          <div className={subtitle({ class: "mt-4" })}>
+            Beautiful, fast and modern React UI library 1.
+          </div>
         </div>
       </section>
     </DefaultLayout>
