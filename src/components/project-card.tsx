@@ -38,7 +38,7 @@ export function ProjectCard({
         initial={{ scale: 1, filter: "blur(0px)" }}
         animate={
           isHovered
-            ? { scale: 1.85, filter: "blur(5px) brightness(0.8)" }
+            ? { scale: 1.85, filter: "blur(5px) brightness(0.5)" }
             : { scale: 1, filter: "blur(0px) brightness(1)" }
         }
       >
@@ -73,11 +73,7 @@ export function ProjectCard({
         className="w-full h-full absolute z-13 "
       >
         <CardBody className="absolute z-13 justify-center items-center w-full h-full cursor-pointer">
-          <p
-            className="text-white font-bold text-2xl text-center"
-            style={{ textShadow: "0 0 5px rgba(0,0,0,0.5)" }}
-          >
-            {" "}
+          <p className="text-white font-bold text-2xl text-center">
             Click to view
           </p>
         </CardBody>
