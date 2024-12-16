@@ -8,7 +8,7 @@ import {
 import { Image } from "@nextui-org/image";
 import { image } from "@nextui-org/theme";
 import { ChipList } from "./chip-list";
-import { inView, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import seedrandom from "seedrandom";
 
