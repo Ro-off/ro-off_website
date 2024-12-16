@@ -10,7 +10,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter basename="/ro-off_website/">
       <Provider>
-        <App />
+        <main className="dark text-foreground bg-background  ">
+          <App />
+        </main>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>
