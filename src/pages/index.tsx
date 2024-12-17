@@ -25,11 +25,11 @@ export default function IndexPage() {
         </div>
       </section>
       <section className="flex flex-col items-center  gap-4 py-8 md:py-10 min-h-screen">
-        <p className={"m-32 font-bold text-9xl"}>Skills</p>
+        <p className={"m-32 " + titleClass}>Skills</p>
         <LogoGallery />
       </section>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 min-h-screen">
-        <p className={"m-32 font-bold text-9xl"}>Projects</p>
+        <p className={"m-32 " + titleClass}>Projects</p>
         <ProjectsGallery />
       </section>
     </DefaultLayout>
