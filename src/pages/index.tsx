@@ -8,7 +8,7 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col justify-center gap-32 py-8 md:py-10 h-screen items-center">
-        <div className="block text-center justify-center text-nowrap w-4/5 md:w-2/3">
+        <div className="block text-center justify-center text-nowrap w-full md:w-3/4">
           <div className={"flex justify-center"}>
             <span className={titleClass}>Hi there&nbsp;</span>
           </div>
@@ -19,7 +19,7 @@ export default function IndexPage() {
             </span>
           </div>
           <div className={"flex justify-end"}>
-            <span className={titleClass + "-mr-12"}>a Front End&nbsp;</span>
+            <span className={titleClass + ""}>a Front End&nbsp;</span>
           </div>
           <div className={"flex justify-center"}>
             <span className={titleClass}>Developer&nbsp;</span>
