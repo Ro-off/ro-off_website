@@ -14,7 +14,9 @@ export default function IndexPage() {
           </div>
           <div className={"flex justify-start"}>
             <span className={titleClass}>I am&nbsp;</span>
-            <span className={titleClass + " text-blue-500"}>Roman&nbsp;</span>
+            <span className={titleClass + " text-blue-500 drop-shadow-glow"}>
+              Roman&nbsp;
+            </span>
           </div>
           <div className={"flex justify-end"}>
             <span className={titleClass + "-mr-12"}>a Front End&nbsp;</span>
