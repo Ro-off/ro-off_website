@@ -1,6 +1,4 @@
-import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
-import { ChipList } from "@/components/chip-list";
 import { ProjectsGallery } from "@/components/projects-gallery";
 import { LogoGallery } from "@/components/logo-gallery";
 
