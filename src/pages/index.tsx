@@ -2,23 +2,26 @@ import DefaultLayout from "@/layouts/default";
 import { ProjectsGallery } from "@/components/projects-gallery";
 import { LogoGallery } from "@/components/logo-gallery";
 
+const titleClass = "font-bold text-6xl  md:text-8xl lg:text-9xl";
+
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col justify-center gap-32 py-8 md:py-10 h-screen">
-        <div className="block text- justify-center">
-          <span className={" font-bold text-9xl text-right "}>
-            Hi there&nbsp;
-          </span>
-          <br />
-          <span className={" font-bold text-9xl"}>I am&nbsp;</span>
-          <span className={" font-bold text-9xl text-blue-500"}>
-            Roman&nbsp;
-          </span>
-          <br />
-          <span className={" font-bold text-9xl"}>Front End&nbsp;</span>
-          <br />
-          <span className={" font-bold text-9xl"}>Developer&nbsp;</span>
+      <section className="flex flex-col justify-center gap-32 py-8 md:py-10 h-screen items-center">
+        <div className="block text-center justify-center text-nowrap w-4/5 md:w-2/3">
+          <div className={"flex justify-center"}>
+            <span className={titleClass}>Hi there&nbsp;</span>
+          </div>
+          <div className={"flex justify-start"}>
+            <span className={titleClass}>I am&nbsp;</span>
+            <span className={titleClass + " text-blue-500"}>Roman&nbsp;</span>
+          </div>
+          <div className={"flex justify-end"}>
+            <span className={titleClass + "-mr-12"}>a Front End&nbsp;</span>
+          </div>
+          <div className={"flex justify-center"}>
+            <span className={titleClass}>Developer&nbsp;</span>
+          </div>
         </div>
       </section>
       <section className="flex flex-col items-center  gap-4 py-8 md:py-10 min-h-screen">
