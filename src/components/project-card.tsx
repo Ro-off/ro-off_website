@@ -10,7 +10,7 @@ import { image } from "@nextui-org/theme";
 import { ChipList } from "./chip-list";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import seedrandom from "seedrandom";
+// import seedrandom from "seedrandom";
 
 // function generateRandomRotation(seed: string) {
 //   const rng = seedrandom(seed + Math.random());
