@@ -1,6 +1,7 @@
 import seedrandom from "seedrandom";
 import { motion } from "framer-motion";
 import { Image } from "@nextui-org/image";
+import { Tooltip } from "@nextui-org/tooltip";
 
 // function generateRandomRotation(seed: string) {
 //   const rng = seedrandom(seed + "f");
@@ -12,7 +13,15 @@ function generateRandomScale(seed: string) {
   return rng() * 0.5 + 0.4;
 }
 
-export function LogoItem({ src, alt }: { src: string; alt: string }) {
+export function LogoItem({
+  src,
+  alt,
+  tooltipContent,
+}: {
+  src: string;
+  alt: string;
+  tooltipContent?: string;
+}) {
   //const rotation = generateRandomRotation(src);
   return (
     <motion.div
@@ -30,13 +39,30 @@ export function LogoItem({ src, alt }: { src: string; alt: string }) {
         scale: 1,
       }}
     >
-      <Image
-        src={src}
-        alt={alt}
-        className=" h-40 cursor-pointer"
-        isBlurred
-        // isZoomed
-      />
+      {tooltipContent ? (
+        <Tooltip
+          content={<p className="text-2xl">{tooltipContent}</p>}
+          showArrow={true}
+          offset={25}
+          color="foreground"
+        >
+          <Image
+            src={src}
+            alt={alt}
+            className=" h-40 cursor-pointer"
+            isBlurred
+            // isZoomed
+          />
+        </Tooltip>
+      ) : (
+        <Image
+          src={src}
+          alt={alt}
+          className=" h-40 cursor-pointer"
+          isBlurred
+          // isZoomed
+        />
+      )}
     </motion.div>
   );
 }
