@@ -12,44 +12,46 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import seedrandom from "seedrandom";
 
-function generateRandomRotation(seed: string) {
-  const rng = seedrandom(seed + Math.random());
-  return rng() * 30 - 15;
-}
+// function generateRandomRotation(seed: string) {
+//   const rng = seedrandom(seed + Math.random());
+//   return rng() * 30 - 15;
+// }
 
 export function ProjectCard({
   title,
   description,
   CardProps,
   orientation = "horizontal",
+  className,
 }: {
   title: string;
   description: string;
   CardProps?: CardProps;
   orientation?: "horizontal" | "vertical";
+  className?: string;
 }) {
   const orientations = {
     vertical: { card: "w-60 h-96" },
     horizontal: { card: "w-96 h-60" },
   };
   const [isHovered, setIsHovered] = useState(false);
-  const rotate = generateRandomRotation(title);
+  // const rotate = generateRandomRotation(title);
 
   return (
     <motion.div
       initial={{
-        rotate: rotate * 1.5,
+        // rotate: rotate * 1.5,
         y: 50,
         scale: 0.8,
       }}
       whileInView={{
-        rotate: rotate,
+        // rotate: rotate,
         y: 0,
         scale: 1,
       }}
     >
       <Card
-        className={`${orientations[orientation].card} bg-transparent drop-shadow-2xl`}
+        className={`${orientations[orientation].card} bg-transparent drop-shadow-2xl ${className}`}
         {...CardProps}
         shadow="none"
       >
