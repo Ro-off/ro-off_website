@@ -17,7 +17,7 @@ import { useState } from "react";
 //   return rng() * 30 - 15;
 // }
 
-export function ProjectCard({
+export function CardItem({
   title,
   description,
   CardProps,

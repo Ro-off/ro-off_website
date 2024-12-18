@@ -1,24 +1,24 @@
-import { ProjectCard } from "@/components/project-card";
+import { CardItem } from "@/components/card-item";
 
-export function ProjectsGallery() {
+export function CardsGallery() {
   return (
     <div className="flex flex-wrap justify-center gap-4 mt-11">
-      <ProjectCard
+      <CardItem
         title="TeethLab"
         description="Dental Laboratory website to store and calculate data"
         CardProps={{ isPressable: true }}
       />
-      <ProjectCard
+      <CardItem
         title="TeethLab"
         description="Dental Laboratory website to store and calculate data"
         CardProps={{ isPressable: true }}
       />
-      <ProjectCard
+      <CardItem
         title="TeethLab"
         description="Dental Laboratory website to store and calculate data"
         CardProps={{ isPressable: true }}
       />
-      <ProjectCard
+      <CardItem
         title="TeethLab"
         description="Dental Laboratory website to store and calculate data"
         CardProps={{ isPressable: true }}

@@ -1,5 +1,5 @@
 import DefaultLayout from "@/layouts/default";
-import { ProjectsGallery } from "@/components/projects-gallery";
+import { CardsGallery } from "@/components/cards-gallery";
 import { LogoGallery } from "@/components/logo-gallery";
 
 const titleClass = "font-bold text-6xl  md:text-8xl lg:text-9xl";
@@ -32,7 +32,7 @@ export default function IndexPage() {
       </section>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 min-h-screen">
         <p className={"m-32 " + titleClass}>Projects</p>
-        <ProjectsGallery />
+        <CardsGallery />
       </section>
     </DefaultLayout>
   );
