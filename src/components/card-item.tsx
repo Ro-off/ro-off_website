@@ -37,7 +37,7 @@ export function CardItem({
         // rotate: rotate * 1.5,
         y: 50,
         scale: 0.8,
-        rotate: [0, 50],
+        rotate: 0,
       }}
       whileInView={{
         // rotate: rotate,

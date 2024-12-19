@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import IndexPage from "@/pages/index";
+import IndexPage from "./pages/index";
 
 function App() {
   return (
