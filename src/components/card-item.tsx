@@ -96,10 +96,25 @@ export function CardItem({
             onHoverEnd={() => setIsHovered(false)}
             className="w-full h-full absolute z-13 "
           >
-            <CardBody className="absolute z-13 justify-center items-center w-full h-full cursor-pointer">
-              <p className="text-white font-bold text-2xl text-center">
-                {hoverContent}
-              </p>
+            <CardBody
+              className={clsx(
+                "absolute",
+                "z-13",
+                "justify-center",
+                "items-center",
+                "w-full",
+                "h-full",
+                "cursor-pointer",
+                "flex",
+                "text-white",
+                "font-bold",
+                "text-2xl",
+                "text-center",
+                "flex-row",
+                "gap-1"
+              )}
+            >
+              {hoverContent}
             </CardBody>
           </motion.div>
         )}

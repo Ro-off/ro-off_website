@@ -1,4 +1,6 @@
 import { CardItem } from "@/components/card-item";
+import { PreviewIcon } from "@/icons/preview-icon";
+import { CodeIcon } from "@/icons/code-icon";
 
 export function CardsGallery({ data }: { data: { value: any[] } }) {
   return (
@@ -9,7 +11,19 @@ export function CardsGallery({ data }: { data: { value: any[] } }) {
           title={item.title}
           description={item.description}
           CardProps={item.CardProps}
-          hoverContent="View Project"
+          hoverContent={
+            item.preview ? (
+              <>
+                <PreviewIcon />
+                <span>View in preview</span>
+              </>
+            ) : (
+              <>
+                <CodeIcon />
+                <span>Open source code</span>
+              </>
+            )
+          }
           className="max-w-full"
         />
       ))}
