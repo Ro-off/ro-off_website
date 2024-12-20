@@ -85,7 +85,7 @@ export function CardItem({
           <CardFooter className="justify-between overflow-hidden py-1 absolute rounded-large bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
             <ChipList
               data={["React", "TypeScript", "Tailwind CSS"]}
-              ChipProps={{ variant: "faded" }}
+              ChipProps={{ variant: "faded", size: "md" }}
             />
           </CardFooter>
         </motion.div>

@@ -9,7 +9,7 @@ export function ChipList({
 }) {
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-2">
+      <div className="flex flex-wrap gap-2">
         {data.map((label) => (
           <Chip key={label} {...ChipProps}>
             {label}

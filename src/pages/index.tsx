@@ -3,6 +3,7 @@ import { SkillsGallery } from "@/components/skills-gallery";
 import { IntroTittle } from "@/components/Intro-tittle";
 import { ProjectsGallery } from "@/components/projects-gallery";
 import { SkillRecord } from "@/types";
+import { clsx } from "clsx";
 
 export default function IndexPage({ skillsData }: { skillsData: SkillRecord }) {
   const titleClass = "font-bold text-6xl  md:text-8xl lg:text-9xl z-30";
@@ -73,11 +74,11 @@ export default function IndexPage({ skillsData }: { skillsData: SkillRecord }) {
         <IntroTittle className={titleClass} />
       </section>
       <section className="flex flex-col items-center  gap-4 py-8 md:py-10 min-h-screen">
-        <p className={"m-32 " + titleClass}>Skills</p>
+        <p className={clsx("mt-20", "mb-12", titleClass)}>Skills</p>
         <SkillsGallery data={skillsData} />
       </section>
       <section className="flex flex-col items-center gap-4 py-8 md:py-10 min-h-screen overflow-hidden pb-10">
-        <p className={"mb-16 " + titleClass}>Projects</p>
+        <p className={clsx("mt-20", "mb-12", titleClass)}>Projects</p>
         <ProjectsGallery data={projectsData} />
       </section>
     </DefaultLayout>

@@ -6,7 +6,7 @@ import { ProjectRecord } from "@/types";
 
 export function ProjectsGallery({ data }: { data: ProjectRecord }) {
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-10 mt-11">
+    <div className="flex flex-row flex-wrap justify-center gap-10">
       {data.isLoading ? (
         <Spinner size="lg" />
       ) : (
