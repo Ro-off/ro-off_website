@@ -17,14 +17,14 @@ export function CardItem({
   description,
   CardProps,
   className,
-  // size = "md",
+  src,
   hoverContent,
 }: {
   title: string;
   description: string;
   CardProps?: CardProps;
   className?: string;
-  // size?: "sm" | "md" | "lg";
+  src: string;
   hoverContent?: React.ReactNode;
 }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -73,7 +73,7 @@ export function CardItem({
             removeWrapper
             alt={title + " " + image}
             className="z-0 w-full h-full object-cover filter brightness-50 shadow-lg"
-            src="teeth-lab.png"
+            src={src}
           />
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
             <h2 className="text-white font-medium text-3xl">{title}</h2>

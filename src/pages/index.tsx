@@ -11,30 +11,30 @@ export default function IndexPage() {
       {
         title: "TeethLab",
         description: "Dental Laboratory website to store and calculate data",
-        CardProps: { isPressable: true },
         preview: "https://teeth-lab.vercel.app/",
         source: "https",
+        imageSrc: "teeth-lab.png",
       },
       {
         title: "TeethLab",
         description: "Dental Laboratory website to store and calculate data",
-        CardProps: { isPressable: true },
         preview: "https://teeth-lab.vercel.app/",
         source: "https",
+        imageSrc: "teeth-lab.png",
       },
       {
         title: "TeethLab",
         description: "Dental Laboratory website to store and calculate data",
-        CardProps: { isPressable: true },
         preview: null,
         source: "https",
+        imageSrc: "teeth-lab.png",
       },
       {
         title: "TeethLab",
         description: "Dental Laboratory website to store and calculate data",
-        CardProps: { isPressable: true },
         preview: "https://teeth-lab.vercel.app/",
         source: "https",
+        imageSrc: "teeth-lab.png",
       },
     ],
   };
@@ -43,19 +43,19 @@ export default function IndexPage() {
     isLoading: false,
     value: [
       {
-        src: "react.png",
+        imageSrc: "react.png",
         title: "React",
       },
       {
-        src: "tailwind.png",
+        imageSrc: "tailwind.png",
         title: "Tailwind CSS",
       },
       {
-        src: "motion.png",
+        imageSrc: "motion.png",
         title: "Framer Motion",
       },
       {
-        src: "vite.png",
+        imageSrc: "vite.png",
         title: "Vite",
       },
     ],
