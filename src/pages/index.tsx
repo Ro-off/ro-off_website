@@ -6,6 +6,7 @@ export default function IndexPage() {
   const titleClass = "font-bold text-6xl  md:text-8xl lg:text-9xl z-30";
 
   const projectsData = {
+    isLoading: false,
     value: [
       {
         title: "TeethLab",
@@ -39,6 +40,7 @@ export default function IndexPage() {
   };
 
   const skillsData = {
+    isLoading: false,
     value: [
       {
         src: "react.png",
