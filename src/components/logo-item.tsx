@@ -45,6 +45,7 @@ export function LogoItem({
           showArrow={true}
           offset={25}
           color="foreground"
+          delay={500}
         >
           <Image
             src={src}
