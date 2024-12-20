@@ -33,7 +33,8 @@ export function CardsGallery() {
           title={item.title}
           description={item.description}
           CardProps={item.CardProps}
-          size="lg"
+          hoverContent="View Project"
+          className="max-w-full"
         />
       ))}
     </div>

@@ -18,21 +18,23 @@ export function CardItem({
   CardProps,
   className,
   size = "md",
+  hoverContent,
 }: {
   title: string;
   description: string;
   CardProps?: CardProps;
   className?: string;
-  size?: "sm" | "md" | "lg";
+  // size?: "sm" | "md" | "lg";
+  hoverContent?: React.ReactNode;
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
-  const sizes = {
-    sm: "w-72 h-44",
-    md: "w-96 h-60",
-    lg: "w-[32rem] h-[20rem]",
-    xl: "w-[48rem] h-[30rem]",
-  };
+  // const sizes = {
+  //   sm: "w-72 h-48",
+  //   md: "w-96 h-60",
+  //   lg: "w-[32rem] h-[20rem]",
+  //   xl: "w-[48rem] h-[30rem]",
+  // };
 
   return (
     <motion.div
@@ -44,7 +46,14 @@ export function CardItem({
         y: 0,
         scale: 1,
       }}
-      className={clsx("relative", className, sizes[size])}
+      className={clsx(
+        "relative",
+        className,
+        "max-w-full",
+        "w-72",
+        "h-48",
+        "lg:w-[32rem] lg:h-[20rem]"
+      )}
     >
       <Card
         className={`bg-transparent drop-shadow-2xl h-full w-full`}
@@ -63,7 +72,7 @@ export function CardItem({
           <Image
             removeWrapper
             alt={title + " " + image}
-            className="z-0 w-full h-full object-cover filter brightness-75 shadow-lg"
+            className="z-0 w-full h-full object-cover filter brightness-50 shadow-lg"
             src="teeth-lab.png"
           />
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
@@ -79,19 +88,21 @@ export function CardItem({
             />
           </CardFooter>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isHovered ? { opacity: 1 } : { opacity: 0 }}
-          onHoverStart={() => setIsHovered(true)}
-          onHoverEnd={() => setIsHovered(false)}
-          className="w-full h-full absolute z-13 "
-        >
-          <CardBody className="absolute z-13 justify-center items-center w-full h-full cursor-pointer">
-            <p className="text-white font-bold text-2xl text-center">
-              Click to view
-            </p>
-          </CardBody>
-        </motion.div>
+        {Boolean(hoverContent) && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isHovered ? { opacity: 1 } : { opacity: 0 }}
+            onHoverStart={() => setIsHovered(true)}
+            onHoverEnd={() => setIsHovered(false)}
+            className="w-full h-full absolute z-13 "
+          >
+            <CardBody className="absolute z-13 justify-center items-center w-full h-full cursor-pointer">
+              <p className="text-white font-bold text-2xl text-center">
+                {hoverContent}
+              </p>
+            </CardBody>
+          </motion.div>
+        )}
       </Card>
     </motion.div>
   );
