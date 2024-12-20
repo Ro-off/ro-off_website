@@ -46,12 +46,13 @@ export function CardItem({
         y: 0,
         scale: 1,
       }}
+      //todo: fix breakpoints
       className={clsx(
         "relative",
         className,
         "max-w-full",
-        "w-72",
-        "h-48",
+        "w-72 h-48",
+        "md:w-96 md:h-60",
         "lg:w-[32rem] lg:h-[20rem]"
       )}
     >

@@ -4,7 +4,7 @@ import { CodeIcon } from "@/icons/code-icon";
 import { Spinner } from "@nextui-org/spinner";
 import { ProjectRecord } from "@/types";
 
-export function CardsGallery({ data }: { data: ProjectRecord }) {
+export function ProjectsGallery({ data }: { data: ProjectRecord }) {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-10 mt-11">
       {data.isLoading ? (
@@ -12,13 +12,13 @@ export function CardsGallery({ data }: { data: ProjectRecord }) {
       ) : (
         data.value.map((item) => (
           <CardItem
-            key={item.title}
+            key={item.id}
             title={item.title}
             description={item.description}
             CardProps={{ isPressable: true }}
             src={item.imageSrc}
             hoverContent={
-              item.preview ? (
+              item.previewSrc ? (
                 <>
                   <PreviewIcon />
                   <span>View in preview</span>

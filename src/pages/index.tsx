@@ -1,8 +1,10 @@
 import DefaultLayout from "@/layouts/default";
-import { LogoGallery } from "@/components/logo-gallery";
+import { SkillsGallery } from "@/components/skills-gallery";
 import { IntroTittle } from "@/components/Intro-tittle";
-import { CardsGallery } from "@/components/cards-gallery";
-export default function IndexPage() {
+import { ProjectsGallery } from "@/components/projects-gallery";
+import { SkillRecord } from "@/types";
+
+export default function IndexPage({ skillsData }: { skillsData: SkillRecord }) {
   const titleClass = "font-bold text-6xl  md:text-8xl lg:text-9xl z-30";
 
   const projectsData = {
@@ -11,55 +13,59 @@ export default function IndexPage() {
       {
         title: "TeethLab",
         description: "Dental Laboratory website to store and calculate data",
-        preview: "https://teeth-lab.vercel.app/",
-        source: "https",
+        previewSrc: "https://teeth-lab.vercel.app/",
+        sourceSrc: "https",
         imageSrc: "teeth-lab.png",
+        id: "1",
       },
       {
         title: "TeethLab",
         description: "Dental Laboratory website to store and calculate data",
-        preview: "https://teeth-lab.vercel.app/",
-        source: "https",
+        previewSrc: "https://teeth-lab.vercel.app/",
+        sourceSrc: "https",
         imageSrc: "teeth-lab.png",
+        id: "2",
       },
       {
         title: "TeethLab",
         description: "Dental Laboratory website to store and calculate data",
-        preview: null,
-        source: "https",
+        previewSrc: null,
+        sourceSrc: "https",
         imageSrc: "teeth-lab.png",
+        id: "3",
       },
       {
         title: "TeethLab",
         description: "Dental Laboratory website to store and calculate data",
-        preview: "https://teeth-lab.vercel.app/",
-        source: "https",
+        previewSrc: "https://teeth-lab.vercel.app/",
+        sourceSrc: "https",
         imageSrc: "teeth-lab.png",
+        id: "4",
       },
     ],
   };
 
-  const skillsData = {
-    isLoading: false,
-    value: [
-      {
-        imageSrc: "react.png",
-        title: "React",
-      },
-      {
-        imageSrc: "tailwind.png",
-        title: "Tailwind CSS",
-      },
-      {
-        imageSrc: "motion.png",
-        title: "Framer Motion",
-      },
-      {
-        imageSrc: "vite.png",
-        title: "Vite",
-      },
-    ],
-  };
+  // const skillsData = {
+  //   isLoading: false,
+  //   value: [
+  //     {
+  //       imageSrc: "react.png",
+  //       title: "React",
+  //     },
+  //     {
+  //       imageSrc: "tailwind.png",
+  //       title: "Tailwind CSS",
+  //     },
+  //     {
+  //       imageSrc: "motion.png",
+  //       title: "Framer Motion",
+  //     },
+  //     {
+  //       imageSrc: "vite.png",
+  //       title: "Vite",
+  //     },
+  //   ],
+  // };
 
   return (
     <DefaultLayout>
@@ -68,11 +74,11 @@ export default function IndexPage() {
       </section>
       <section className="flex flex-col items-center  gap-4 py-8 md:py-10 min-h-screen">
         <p className={"m-32 " + titleClass}>Skills</p>
-        <LogoGallery data={skillsData} />
+        <SkillsGallery data={skillsData} />
       </section>
       <section className="flex flex-col items-center gap-4 py-8 md:py-10 min-h-screen overflow-hidden pb-10">
         <p className={"mb-16 " + titleClass}>Projects</p>
-        <CardsGallery data={projectsData} />
+        <ProjectsGallery data={projectsData} />
       </section>
     </DefaultLayout>
   );

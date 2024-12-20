@@ -2,7 +2,7 @@ import { LogoItem } from "./logo-item";
 import { Spinner } from "@nextui-org/spinner";
 import { SkillRecord } from "@/types";
 
-export function LogoGallery({ data }: { data: SkillRecord }) {
+export function SkillsGallery({ data }: { data: SkillRecord }) {
   return data.isLoading ? (
     <Spinner size="lg" />
   ) : (
@@ -12,6 +12,7 @@ export function LogoGallery({ data }: { data: SkillRecord }) {
           src={item.imageSrc}
           alt={item.title}
           tooltipContent={item.title}
+          key={item.id}
         />
       ))}
     </div>

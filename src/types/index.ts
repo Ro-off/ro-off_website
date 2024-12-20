@@ -7,6 +7,7 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 export type SkillRecord = {
   isLoading: boolean;
   value: {
+    id: string;
     imageSrc: string;
     title: string;
   }[];
@@ -15,10 +16,11 @@ export type SkillRecord = {
 export type ProjectRecord = {
   isLoading: boolean;
   value: {
+    id: string;
     title: string;
     description: string;
-    preview: string | null;
-    source: string;
+    previewSrc: string | null;
+    sourceSrc: string;
     imageSrc: string;
   }[];
 };
