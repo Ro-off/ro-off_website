@@ -44,7 +44,7 @@ export function CardItem({
         y: 0,
         scale: 1,
       }}
-      className={`relative w-96 h-60 perspective-dramatic ${className}`}
+      className={`relative w-96 h-60 ${className}`}
     >
       <Card
         className={`bg-transparent drop-shadow-2xl h-full w-full`}

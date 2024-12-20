@@ -1,9 +1,9 @@
 import DefaultLayout from "@/layouts/default";
 import { LogoGallery } from "@/components/logo-gallery";
 import { IntroTittle } from "@/components/Intro-tittle";
-
+import { CardsGallery } from "@/components/cards-gallery";
 export default function IndexPage() {
-  const titleClass = "font-bold text-6xl  md:text-8xl lg:text-9xl";
+  const titleClass = "font-bold text-6xl  md:text-8xl lg:text-9xl z-30";
 
   return (
     <DefaultLayout>
@@ -14,8 +14,9 @@ export default function IndexPage() {
         <p className={"m-32 " + titleClass}>Skills</p>
         <LogoGallery />
       </section>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 min-h-screen">
-        <p className={"m-32 " + titleClass}>Projects</p>
+      <section className="flex flex-col items-center gap-4 py-8 md:py-10 min-h-screen overflow-hidden pb-10">
+        <p className={"mb-16 " + titleClass}>Projects</p>
+        <CardsGallery />
       </section>
     </DefaultLayout>
   );
