@@ -4,6 +4,7 @@ import { IntroTittle } from "@/components/Intro-tittle";
 import { ProjectsGallery } from "@/components/projects-gallery";
 import { SkillRecord } from "@/types";
 import { clsx } from "clsx";
+import { motion } from "framer-motion";
 
 export default function IndexPage({ skillsData }: { skillsData: SkillRecord }) {
   const titleClass = "font-bold text-6xl  md:text-8xl lg:text-9xl z-30";
@@ -74,11 +75,25 @@ export default function IndexPage({ skillsData }: { skillsData: SkillRecord }) {
         <IntroTittle className={titleClass} />
       </section>
       <section className="flex flex-col items-center  gap-4 py-8 md:py-10 min-h-screen">
-        <p className={clsx("mt-20", "mb-12", titleClass)}>Skills</p>
+        <motion.p
+          className={clsx("mt-20", "mb-12", titleClass)}
+          initial={{ y: 100 }}
+          whileInView={{ y: 0 }}
+          viewport={{ once: true }}
+        >
+          Skills
+        </motion.p>
         <SkillsGallery data={skillsData} />
       </section>
       <section className="flex flex-col items-center gap-4 py-8 md:py-10 min-h-screen overflow-hidden pb-10">
-        <p className={clsx("mt-20", "mb-12", titleClass)}>Projects</p>
+        <motion.p
+          className={clsx("mt-20", "mb-12", titleClass)}
+          initial={{ y: 100 }}
+          whileInView={{ y: 0 }}
+          viewport={{ once: true }}
+        >
+          Projects
+        </motion.p>
         <ProjectsGallery data={projectsData} />
       </section>
     </DefaultLayout>

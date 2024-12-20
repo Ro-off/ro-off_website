@@ -46,6 +46,7 @@ export function CardItem({
         y: 0,
         scale: 1,
       }}
+      viewport={{ once: true }}
       //todo: fix breakpoints
       className={clsx(
         "relative",

@@ -38,6 +38,7 @@ export function LogoItem({
         y: 0,
         scale: 1,
       }}
+      viewport={{ once: true }}
     >
       {tooltipContent ? (
         <Tooltip
