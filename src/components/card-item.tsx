@@ -17,7 +17,7 @@ export function CardItem({
   description,
   CardProps,
   className,
-  size = "md",
+  // size = "md",
   hoverContent,
 }: {
   title: string;

@@ -5,6 +5,52 @@ import { CardsGallery } from "@/components/cards-gallery";
 export default function IndexPage() {
   const titleClass = "font-bold text-6xl  md:text-8xl lg:text-9xl z-30";
 
+  const projectsData = {
+    value: [
+      {
+        title: "TeethLab",
+        description: "Dental Laboratory website to store and calculate data",
+        CardProps: { isPressable: true },
+      },
+      {
+        title: "TeethLab",
+        description: "Dental Laboratory website to store and calculate data",
+        CardProps: { isPressable: true },
+      },
+      {
+        title: "TeethLab",
+        description: "Dental Laboratory website to store and calculate data",
+        CardProps: { isPressable: true },
+      },
+      {
+        title: "TeethLab",
+        description: "Dental Laboratory website to store and calculate data",
+        CardProps: { isPressable: true },
+      },
+    ],
+  };
+
+  const skillsData = {
+    value: [
+      {
+        src: "react.png",
+        title: "React",
+      },
+      {
+        src: "tailwind.png",
+        title: "Tailwind CSS",
+      },
+      {
+        src: "motion.png",
+        title: "Framer Motion",
+      },
+      {
+        src: "vite.png",
+        title: "Vite",
+      },
+    ],
+  };
+
   return (
     <DefaultLayout>
       <section className="flex flex-col justify-center gap-32 py-8 md:py-10 h-screen items-center">
@@ -12,11 +58,11 @@ export default function IndexPage() {
       </section>
       <section className="flex flex-col items-center  gap-4 py-8 md:py-10 min-h-screen">
         <p className={"m-32 " + titleClass}>Skills</p>
-        <LogoGallery />
+        <LogoGallery data={skillsData} />
       </section>
       <section className="flex flex-col items-center gap-4 py-8 md:py-10 min-h-screen overflow-hidden pb-10">
         <p className={"mb-16 " + titleClass}>Projects</p>
-        <CardsGallery />
+        <CardsGallery data={projectsData} />
       </section>
     </DefaultLayout>
   );

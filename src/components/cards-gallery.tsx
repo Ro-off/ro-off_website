@@ -1,30 +1,6 @@
 import { CardItem } from "@/components/card-item";
 
-export function CardsGallery() {
-  const data = {
-    value: [
-      {
-        title: "TeethLab",
-        description: "Dental Laboratory website to store and calculate data",
-        CardProps: { isPressable: true },
-      },
-      {
-        title: "TeethLab",
-        description: "Dental Laboratory website to store and calculate data",
-        CardProps: { isPressable: true },
-      },
-      {
-        title: "TeethLab",
-        description: "Dental Laboratory website to store and calculate data",
-        CardProps: { isPressable: true },
-      },
-      {
-        title: "TeethLab",
-        description: "Dental Laboratory website to store and calculate data",
-        CardProps: { isPressable: true },
-      },
-    ],
-  };
+export function CardsGallery({ data }: { data: { value: any[] } }) {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-10 mt-11">
       {data.value.map((item) => (

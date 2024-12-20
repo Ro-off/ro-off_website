@@ -1,12 +1,16 @@
 import { LogoItem } from "./logo-item";
 
-export function LogoGallery() {
+export function LogoGallery({ data }: { data: { value: any[] } }) {
   return (
     <div className="flex flex-wrap justify-center gap-14 mt-11">
-      <LogoItem src="vite.png" alt="Logo 1" tooltipContent="Vite" />
-      <LogoItem src="react.png" alt="Logo 2" tooltipContent="React" />
-      <LogoItem src="tailwind.png" alt="Logo 3" tooltipContent="Tailwind CSS" />
-      <LogoItem src="motion.png" alt="Logo 4" tooltipContent="Framer Motion" />
+      {data.value.map((item) => (
+        <LogoItem
+          src={item.src}
+          // CardProps={item.CardProps}
+          alt={item.title}
+          tooltipContent={item.title}
+        />
+      ))}
     </div>
   );
 }
