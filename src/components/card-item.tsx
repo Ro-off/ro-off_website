@@ -10,41 +10,41 @@ import { image } from "@nextui-org/theme";
 import { ChipList } from "./chip-list";
 import { motion } from "framer-motion";
 import { useState } from "react";
-// import seedrandom from "seedrandom";
-
-// function generateRandomRotation(seed: string) {
-//   const rng = seedrandom(seed + Math.random());
-//   return rng() * 30 - 15;
-// }
+import { clsx } from "clsx";
 
 export function CardItem({
   title,
   description,
   CardProps,
   className,
+  size = "md",
 }: {
   title: string;
   description: string;
   CardProps?: CardProps;
   className?: string;
+  size?: "sm" | "md" | "lg";
 }) {
   const [isHovered, setIsHovered] = useState(false);
-  // const rotate = generateRandomRotation(title);
+
+  const sizes = {
+    sm: "w-72 h-44",
+    md: "w-96 h-60",
+    lg: "w-[32rem] h-[20rem]",
+    xl: "w-[48rem] h-[30rem]",
+  };
 
   return (
     <motion.div
       initial={{
-        // rotate: rotate * 1.5,
         y: 50,
         scale: 0.8,
-        rotate: 0,
       }}
       whileInView={{
-        // rotate: rotate,
         y: 0,
         scale: 1,
       }}
-      className={`relative w-96 h-60 ${className}`}
+      className={clsx("relative", className, sizes[size])}
     >
       <Card
         className={`bg-transparent drop-shadow-2xl h-full w-full`}
@@ -65,10 +65,6 @@ export function CardItem({
             alt={title + " " + image}
             className="z-0 w-full h-full object-cover filter brightness-75 shadow-lg"
             src="teeth-lab.png"
-            //width="100%"
-            //height={300}
-            //isZoomed
-            // isBlurred
           />
           <CardHeader className="absolute z-10 top-1 flex-col !items-start">
             <h2 className="text-white font-medium text-3xl">{title}</h2>
