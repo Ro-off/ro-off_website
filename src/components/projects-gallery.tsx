@@ -7,7 +7,7 @@ import { ProjectRecord } from "@/types";
 export function ProjectsGallery({ data }: { data: ProjectRecord }) {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-10">
-      {data.isLoading ? (
+      {data.isLoading || !data ? (
         <Spinner size="lg" />
       ) : (
         data.value.map((item) => (
@@ -15,7 +15,16 @@ export function ProjectsGallery({ data }: { data: ProjectRecord }) {
             key={item.id}
             title={item.title}
             description={item.description}
-            CardProps={{ isPressable: true }}
+            CardProps={{
+              isPressable: true,
+              onPress: () => {
+                if (item.previewSrc) {
+                  window.open(item.previewSrc, "_blank");
+                } else {
+                  window.open(item.sourceSrc, "_blank");
+                }
+              },
+            }}
             src={item.imageSrc}
             hoverContent={
               item.previewSrc ? (

@@ -22,5 +22,6 @@ export type ProjectRecord = {
     previewSrc: string | null;
     sourceSrc: string;
     imageSrc: string;
+    techList: string[];
   }[];
 };
