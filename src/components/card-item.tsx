@@ -74,7 +74,7 @@ export function CardItem({
           }
         >
           <Image
-            // removeWrapper
+            removeWrapper
             alt={title + " " + image}
             className="z-0 w-full h-full object-cover filter brightness-50 shadow-lg"
             src={src}
