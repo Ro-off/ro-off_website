@@ -2,50 +2,60 @@ import DefaultLayout from "@/layouts/default";
 import { SkillsGallery } from "@/components/skills-gallery";
 import { IntroTittle } from "@/components/Intro-tittle";
 import { ProjectsGallery } from "@/components/projects-gallery";
-import { SkillRecord } from "@/types";
+import { SkillRecord, ProjectRecord } from "@/types";
 import { clsx } from "clsx";
 import { motion } from "framer-motion";
 
-export default function IndexPage({ skillsData }: { skillsData: SkillRecord }) {
+export default function IndexPage({
+  skillsData,
+  projectsData,
+}: {
+  skillsData: SkillRecord;
+  projectsData: ProjectRecord;
+}) {
   const titleClass = "font-bold text-6xl  md:text-8xl lg:text-9xl z-30";
 
-  const projectsData = {
-    isLoading: false,
-    value: [
-      {
-        title: "TeethLab",
-        description: "Dental Laboratory website to store and calculate data",
-        previewSrc: "https://teeth-lab.vercel.app/",
-        sourceSrc: "https",
-        imageSrc: "teeth-lab.png",
-        id: "1",
-      },
-      {
-        title: "TeethLab",
-        description: "Dental Laboratory website to store and calculate data",
-        previewSrc: "https://teeth-lab.vercel.app/",
-        sourceSrc: "https",
-        imageSrc: "teeth-lab.png",
-        id: "2",
-      },
-      {
-        title: "TeethLab",
-        description: "Dental Laboratory website to store and calculate data",
-        previewSrc: null,
-        sourceSrc: "https",
-        imageSrc: "teeth-lab.png",
-        id: "3",
-      },
-      {
-        title: "TeethLab",
-        description: "Dental Laboratory website to store and calculate data",
-        previewSrc: "https://teeth-lab.vercel.app/",
-        sourceSrc: "https",
-        imageSrc: "teeth-lab.png",
-        id: "4",
-      },
-    ],
-  };
+  // const projectsData = {
+  //   isLoading: false,
+  //   value: [
+  //     {
+  //       title: "TeethLab",
+  //       description: "Dental Laboratory website to store and calculate data",
+  //       previewSrc: "https://teeth-lab.vercel.app/",
+  //       sourceSrc: "https",
+  //       imageSrc: "teeth-lab.png",
+  //       id: "1",
+  //       techList: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+  //     },
+  //     {
+  //       title: "TeethLab",
+  //       description: "Dental Laboratory website to store and calculate data",
+  //       previewSrc: "https://teeth-lab.vercel.app/",
+  //       sourceSrc: "https",
+  //       imageSrc: "teeth-lab.png",
+  //       id: "2",
+  //       techList: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+  //     },
+  //     {
+  //       title: "TeethLab",
+  //       description: "Dental Laboratory website to store and calculate data",
+  //       previewSrc: null,
+  //       sourceSrc: "https",
+  //       imageSrc: "teeth-lab.png",
+  //       id: "3",
+  //       techList: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+  //     },
+  //     {
+  //       title: "TeethLab",
+  //       description: "Dental Laboratory website to store and calculate data",
+  //       previewSrc: "https://teeth-lab.vercel.app/",
+  //       sourceSrc: "https",
+  //       imageSrc: "teeth-lab.png",
+  //       id: "4",
+  //       techList: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+  //     },
+  //   ],
+  // };
 
   // const skillsData = {
   //   isLoading: false,

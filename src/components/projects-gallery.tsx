@@ -30,6 +30,7 @@ export function ProjectsGallery({ data }: { data: ProjectRecord }) {
                 </>
               )
             }
+            chipList={item.techList}
             className="max-w-full"
           />
         ))

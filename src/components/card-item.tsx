@@ -19,6 +19,7 @@ export function CardItem({
   className,
   src,
   hoverContent,
+  chipList,
 }: {
   title: string;
   description: string;
@@ -26,6 +27,7 @@ export function CardItem({
   className?: string;
   src: string;
   hoverContent?: React.ReactNode;
+  chipList: string[];
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -85,7 +87,7 @@ export function CardItem({
           </CardHeader>
           <CardFooter className="justify-between overflow-hidden py-1 absolute rounded-large bottom-1 w-[calc(100%_-_8px)] ml-1 z-10">
             <ChipList
-              data={["React", "TypeScript", "Tailwind CSS"]}
+              data={chipList}
               ChipProps={{ variant: "faded", size: "md" }}
             />
           </CardFooter>
