@@ -10,6 +10,7 @@ import { ProjectRecord } from "@/types";
 import { Skeleton } from "@nextui-org/skeleton";
 import { CodeIcon } from "@/icons/code-icon";
 import { FullscreenIcon } from "@/icons/fullscreen";
+import { clsx } from "clsx";
 
 export function PreviewModal({
   isOpen,
@@ -39,16 +40,47 @@ export function PreviewModal({
               <Skeleton className="rounded-lg w-full h-[calc(85vh-200px)] absolute z-30 right-0" />
               {data.previewSrc ? (
                 <iframe
-                  className="w-full h-[calc(85vh-200px)] rounded-lg z-40 object-scale-down"
+                  className={clsx(
+                    "w-full",
+                    "h-[calc(85vh-200px)]",
+                    "rounded-lg",
+                    "z-40",
+                    "object-scale-down"
+                  )}
                   src={data.previewSrc}
                   title={data.title}
                 />
               ) : (
-                <img
-                  className="w-full h-[calc(85vh-200px)] rounded-lg z-40 object-cover"
-                  src={data.imageSrc}
-                  alt={data.title}
-                />
+                <div
+                  className={clsx(
+                    "w-full",
+                    "h-[calc(85vh-200px)]",
+                    "rounded-lg",
+                    "z-40",
+                    "flex",
+                    "items-center",
+                    "justify-center",
+                    "overflow-hidden",
+                    "relative"
+                  )}
+                >
+                  <img
+                    src={data.imageSrc}
+                    alt={data.title}
+                    className={clsx("max-w-full", "max-h-full", "z-40")}
+                  />
+                  <img
+                    src={data.imageSrc}
+                    alt={data.title}
+                    className={clsx(
+                      "min-w-full",
+                      "min-h-full",
+                      "absolute",
+                      "z-30",
+                      "blur-lg"
+                    )}
+                  />
+                </div>
               )}
             </ModalBody>
             <ModalFooter>
