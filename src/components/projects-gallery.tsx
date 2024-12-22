@@ -1,6 +1,5 @@
 import { CardItem } from "@/components/card-item";
 import { PreviewIcon } from "@/icons/preview-icon";
-import { CodeIcon } from "@/icons/code-icon";
 import { Spinner } from "@nextui-org/spinner";
 import { ProjectRecord } from "@/types";
 import { useDisclosure } from "@nextui-org/modal";
