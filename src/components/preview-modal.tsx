@@ -27,7 +27,7 @@ export function PreviewModal({
       onOpenChange={onOpenChange}
       size="5xl"
       backdrop="blur"
-      className="dark text-foreground"
+      className="dark text-foreground h-[calc(100vh-50px)]"
     >
       <ModalContent>
         {() => (
@@ -36,13 +36,13 @@ export function PreviewModal({
               <h2 className="text-2xl font-bold">{data.title}</h2>
               <p className="text-sm text-gray-500">{data.description}</p>
             </ModalHeader>
-            <ModalBody className="relative px-0 mx-4">
-              <Skeleton className="rounded-lg w-full h-[calc(85vh-200px)] absolute z-30 right-0" />
+            <ModalBody className="relative px-0 mx-4 py-0">
+              <Skeleton className="rounded-lg w-full h-full absolute z-30 right-0" />
               {data.previewSrc ? (
                 <iframe
                   className={clsx(
                     "w-full",
-                    "h-[calc(85vh-200px)]",
+                    "h-full",
                     "rounded-lg",
                     "z-40",
                     "object-scale-down"
@@ -54,7 +54,7 @@ export function PreviewModal({
                 <div
                   className={clsx(
                     "w-full",
-                    "h-[calc(85vh-200px)]",
+                    "h-full",
                     "rounded-lg",
                     "z-40",
                     "flex",
