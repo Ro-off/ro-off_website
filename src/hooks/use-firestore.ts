@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "@/firebase/firebase.config";
 import { SkillRecord, ProjectRecord } from "@/types";
 
@@ -44,8 +44,9 @@ export function useProjectRecords() {
   } as ProjectRecord);
   useEffect(() => {
     const fetchProjects = async () => {
-      const projectsCollection = collection(db, "projects");
-      const projectsSnapshot = await getDocs(projectsCollection);
+      const projectsRef = collection(db, "projects");
+      const projectQuery = query(projectsRef, orderBy("order", "desc"));
+      const projectsSnapshot = await getDocs(projectQuery);
       const projectsList = projectsSnapshot.docs
         .map((doc) => {
           const data = doc.data();
